@@ -1,0 +1,12 @@
+[build]
+  publish = "."
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+
+# Brew Haven - static site, no build step needed.
+# Netlify will serve index.html directly.
