@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brew Haven - Cozy Coffee Corner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">☕ Brew Haven</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#visit">Visit Us</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Good Mornings Start With Great Coffee</h1>
+      <p>Small-batch roasted beans, brewed with love in the heart of the city.</p>
+      <div class="hero-buttons">
+        <a href="#menu" class="btn btn-primary">View Menu</a>
+        <a href="#visit" class="btn btn-secondary">Find Us</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="coffee-cup">☕</div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>Our Story</h2>
+    <p class="section-sub">A tiny shop with a big love for coffee.</p>
+    <div class="cards-3">
+      <div class="card">
+        <h3>🌱 Ethically Sourced</h3>
+        <p>We buy directly from small farms in Colombia, Ethiopia, and Sumatra.</p>
+      </div>
+      <div class="card">
+        <h3>🔥 Roasted Fresh</h3>
+        <p>Beans roasted in-house every Tuesday and Friday. Never stale, ever.</p>
+      </div>
+      <div class="card">
+        <h3>❤️ Community First</h3>
+        <p>Open mic Fridays, book club Sundays, and free Wi-Fi every day.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" class="section section-alt">
+    <h2>Popular Menu</h2>
+    <p class="section-sub">Click “Add” to build your order. No sign-up needed!</p>
+    <div class="cards-3" id="menuGrid">
+      <div class="card menu-item" data-name="Espresso" data-price="2.50">
+        <div class="menu-emoji">⚫</div>
+        <h3>Espresso</h3>
+        <p>Bold, smooth single shot.</p>
+        <p class="price">$2.50</p>
+        <button class="btn btn-small add-btn">Add</button>
+      </div>
+      <div class="card menu-item" data-name="Cappuccino" data-price="3.80">
+        <div class="menu-emoji">☁️</div>
+        <h3>Cappuccino</h3>
+        <p>Espresso + steamed milk + foam.</p>
+        <p class="price">$3.80</p>
+        <button class="btn btn-small add-btn">Add</button>
+      </div>
+      <div class="card menu-item" data-name="Caramel Latte" data-price="4.50">
+        <div class="menu-emoji">🍮</div>
+        <h3>Caramel Latte</h3>
+        <p>Our bestseller. Sweet & creamy.</p>
+        <p class="price">$4.50</p>
+        <button class="btn btn-small add-btn">Add</button>
+      </div>
+      <div class="card menu-item" data-name="Cold Brew" data-price="4.00">
+        <div class="menu-emoji">🧊</div>
+        <h3>Cold Brew</h3>
+        <p>Steeped 18 hours, served over ice.</p>
+        <p class="price">$4.00</p>
+        <button class="btn btn-small add-btn">Add</button>
+      </div>
+      <div class="card menu-item" data-name="Mocha" data-price="4.75">
+        <div class="menu-emoji">🍫</div>
+        <h3>Mocha</h3>
+        <p>Chocolate + espresso + whipped cream.</p>
+        <p class="price">$4.75</p>
+        <button class="btn btn-small add-btn">Add</button>
+      </div>
+      <div class="card menu-item" data-name="Blueberry Muffin" data-price="2.95">
+        <div class="menu-emoji">🧁</div>
+        <h3>Blueberry Muffin</h3>
+        <p>Baked fresh every morning.</p>
+        <p class="price">$2.95</p>
+        <button class="btn btn-small add-btn">Add</button>
+      </div>
+    </div>
+
+    <div class="order-box">
+      <h3>🧾 Your Order: <span id="orderCount">0</span> items</h3>
+      <ul id="orderList"></ul>
+      <p><strong>Total: $<span id="orderTotal">0.00</span></strong></p>
+      <button class="btn btn-primary" id="clearOrder">Clear Order</button>
+    </div>
+  </section>
+
+  <section id="visit" class="section">
+    <h2>Visit Us</h2>
+    <div class="visit-grid">
+      <div>
+        <h3>📍 Address</h3>
+        <p>123 Roast Lane<br />Seattle, WA 98101</p>
+        <h3>🕒 Hours</h3>
+        <p>Mon – Fri: 7am – 7pm<br />Sat – Sun: 8am – 5pm</p>
+      </div>
+      <form id="contactForm" class="contact-form">
+        <h3>Say Hello!</h3>
+        <label>
+          Name
+          <input type="text" id="name" placeholder="Your name" required />
+        </label>
+        <label>
+          Message
+          <textarea id="message" rows="4" placeholder="Love the latte art!" required></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p id="formMsg" class="form-msg"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>Made with ☕ by Brew Haven • 2026 • Open <strong>index.html</strong> to view this site</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
